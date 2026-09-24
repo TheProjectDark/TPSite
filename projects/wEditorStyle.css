@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #444;
+    color: gainsboro;
+}
+.header {
+    background-color: rgb(40, 40, 40);
+    text-align: center;
+    color: gainsboro;
+    font-size: 60px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+.subheader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+.menu-btn {
+    font-size: 30px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: gainsboro;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    height: 100%;
+    background: #222;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: gainsboro;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgb(40, 40, 40);
+    color: gainsboro;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.wEditorLogo {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+}
+
+.desc {
+    margin: 0;
+    color: gainsboro;
+}
