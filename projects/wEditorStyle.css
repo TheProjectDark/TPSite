@@ -18,9 +18,149 @@ body {
 
 .subheader {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     padding: 15px 20px;
+}
+
+.subhdesc {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+
+.descrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+}
+
+.wEditorLogo {
+    width: 120px;
+    flex-shrink: 0;
+    height: auto;
+}
+
+.desc {
+    margin: 0;
+    color: gainsboro;
+    white-space: pre-line;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .descrow {
+        flex-direction: column;
+    }
+
+    .desc {
+        text-align: center;
+    }
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.featurestitle {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+
+.featureslist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 900px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.platforms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.platformstitle {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+
+.platformstable {
+    border-collapse: collapse;
+    max-width: 900px;
+    width: 100%;
+    background: rgb(40, 40, 40);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.platformstable th,
+.platformstable td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.platformstable th {
+    background: #222;
+}
+
+.platformstable tr:last-child td {
+    border-bottom: none;
+}
+
+.scrtitle {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+
+.screenshot {
+    max-width: 80%;
+    max-height: 60vh;
+
+    width: auto;
+    height: auto;
+
+    border-radius: 8px;
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto 20px auto;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.repo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.repotitle {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+
+.repodesc {
+    margin: 0;
+    color: gainsboro;
+    white-space: pre-line;
+    max-width: 900px;
+    text-align: center;
 }
 
 .menu-btn {
@@ -61,22 +201,10 @@ body {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     background: rgb(40, 40, 40);
     color: gainsboro;
     text-align: center;
     padding: 10px 0;
-}
-
-.wEditorLogo {
-    width: 120px;
-    max-width: 100%;
-    height: auto;
-}
-
-.desc {
-    margin: 0;
-    color: gainsboro;
 }

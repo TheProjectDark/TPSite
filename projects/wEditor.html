@@ -1,39 +1,107 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="wEditorStyle.css">
-    <title>TPSite - wEditor</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="wEditorStyle.css">
+        <title>TPSite - wEditor</title>
+    </head>
 
-<body>
+    <body>
 
-<button id="menuBtn" class="menu-btn">☰</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
 
-<div id="sidebar" class="sidebar">
-    <a href="../index.html">Home</a>
-    <a href="wEditor.html">wEditor</a>
-    <a href="DemowinterUnityKernel.html">Demowinter/UnityKernel</a>
-</div>
+        <div id="sidebar" class="sidebar">
+            <a href="../index.html">Home</a>
+            <a href="wEditor.html">wEditor</a>
+            <a href="DemowinterUnityKernel.html">Demowinter/UnityKernel</a>
+        </div>
 
-<div class="header">
-    <h1>wEditor</h1>
-</div>
+        <div class="header">
+            <h1>wEditor</h1>
+        </div>
 
-<div class="subheader">
-    <img src="../img/wEditor/wEditor.png" alt="wEditor Logo" class="wEditorLogo">
+        <div class="subheader">
+            <p class="subhdesc">Description</p>
+            <div class="descrow">
+                <img src="../img/wEditor/wEditor.png" alt="wEditor Logo" class="wEditorLogo">
+                <p class="desc">
+                    wEditor - a free, open-source and cross-platform text and code editor made with C++ and the <a href="https://www.wxwidgets.org/" target="_blank">wxWidgets</a> library.
+                    It is a native application that starts instantly, uses minimal memory and needs no installation - just download the binary and run it.
+                    Goals of the project: simplicity, speed and being lightweight.
+                    Currently wEditor is in beta - it is functional, but may contain bugs and unfinished features.
+                    The editor is designed and developed only by <a href="https://github.com/TheProjectDark" target="_blank">TheProjectDark</a>.
+                </p>
+            </div>
+        </div>
 
-    <p class="desc">
-        wEditor - a free and open-source code editor designed for speed and simplicity.
-    </p>
-</div>
+        <div class="features">
+            <p class="featurestitle">
+                Features
+            </p>
+            <ul class="featureslist">
+                <li>Syntax highlighting</li>
+                <li>Lightweight and fast - tiny footprint, no runtime needed</li>
+                <li>Cross-platform - Linux, Windows and macOS</li>
+                <li>Portable - no installation required</li>
+                <li>File management - New, Open, Save and Save As</li>
+                <li>Undo / Redo</li>
+                <li>Autosave on exit (can be disabled in Preferences)</li>
+                <li>Preferences panel</li>
+                <li>Line margin</li>
+            </ul>
+        </div>
 
-<script src="../main.js"></script>
+        <div class="platforms">
+            <p class="platformstitle">
+                Supported platforms
+            </p>
+            <table class="platformstable">
+                <tr>
+                    <th>Platform</th>
+                    <th>Architecture</th>
+                </tr>
+                <tr>
+                    <td>Linux (Debian 11+ / Ubuntu 22.04+)</td>
+                    <td>x86-64, ARM64</td>
+                </tr>
+                <tr>
+                    <td>Windows 7+</td>
+                    <td>x86-64, ARM64 (Windows 11)</td>
+                </tr>
+                <tr>
+                    <td>macOS 12+ (Monterey and newer)</td>
+                    <td>Intel (x86-64), Apple Silicon (ARM64)</td>
+                </tr>
+            </table>
+        </div>
 
-<footer>
-    <p>© 2026 TPSite by TheProjectDark</p>
-    <a href="https://github.com/TheProjectDark">GitHub</a>
-</footer>
+        <div class="screenshots">
+            <p class="scrtitle">
+                Screenshots
+            </p>
+            <img src="../img/wEditor/macOS.png" alt="wEditor on macOS" class="screenshot">
+            <img src="../img/wEditor/Linux.png" alt="wEditor on Linux" class="screenshot">
+            <img src="../img/wEditor/Windows11.png" alt="wEditor on Windows 11" class="screenshot">
+            <img src="../img/wEditor/Windows7.png" alt="wEditor on Windows 7" class="screenshot">
+        </div>
 
-</body>
+        <div class="repo">
+            <p class="repotitle">
+                Repository
+            </p>
+            <p class="repodesc">
+                You can find the source code and pre-built applications on <a href="https://github.com/TheProjectDark/wEditor" target="_blank">GitHub</a>
+                (see the <a href="https://github.com/TheProjectDark/wEditor/releases" target="_blank">Releases</a> page).
+                wEditor is licensed under the GNU General Public License v3.0.
+                Contributions, bug reports and suggestions are welcome!
+            </p>
+        </div>
+
+        <script src="../main.js"></script>
+
+        <footer>
+            <p>© 2026 TPSite by TheProjectDark</p>
+            <a href="https://github.com/TheProjectDark">GitHub</a>
+        </footer>
+    </body>
 </html>
