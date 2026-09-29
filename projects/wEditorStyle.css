@@ -163,6 +163,57 @@ body {
     text-align: center;
 }
 
+.downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.downloadstitle {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+
+.downloadbtn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.downloadbtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #4CAF50;
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.downloadbtn span {
+    position: relative;
+    z-index: 1;
+}
+
+.downloadbtn:hover::before {
+    left: 0;
+}
+
+.downloadbtn:hover {
+    color: white;
+}
+
 .menu-btn {
     font-size: 30px;
     position: fixed;
