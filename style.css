@@ -1,72 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    min-height: 100vh;
     margin: 0;
-    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
     background: #444;
     color: gainsboro;
 }
 
-h1 {
-    text-align: center;
-    color: gainsboro;
-    font-size: 60px;
-    margin-top: 20px;
+.content {
     background-color: rgb(40, 40, 40);
-    margin: 0;
 }
 
-.subheader {
-    gap: 15px;
-    padding: 15px 20px;
+h1 {
+    margin: 0;
+    padding: 24px 16px;
+    color: gainsboro;
+    font-size: clamp(42px, 7vw, 60px);
+    text-align: center;
 }
 
 .menu-btn {
-    font-size: 30px;
     position: fixed;
+    z-index: 3;
     top: 10px;
     left: 10px;
-    background: none;
-    border: none;
+    padding: 5px 9px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: rgb(40, 40, 40);
     color: gainsboro;
+    font-size: 25px;
     cursor: pointer;
+}
+
+.menu-btn:focus-visible,
+.sidebar a:focus-visible,
+a:focus-visible {
+    outline: 2px solid gainsboro;
+    outline-offset: 3px;
 }
 
 .sidebar {
     position: fixed;
+    z-index: 2;
     top: 0;
-    left: -220px;
+    left: 0;
     width: 220px;
     height: 100%;
-    background: #222;
     padding-top: 60px;
-    transition: 0.3s;
+    background: #222;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
 }
 
 .sidebar.active {
-    left: 0;
+    transform: translateX(0);
 }
 
 .sidebar a {
     display: block;
-    padding: 10px;
+    padding: 12px 14px;
     color: gainsboro;
     text-decoration: none;
 }
 
-.sidebar a:hover {
+.sidebar a:hover,
+.sidebar a[aria-current="page"] {
     background: #444;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgb(40, 40, 40);
-    color: gainsboro;
+main {
+    width: min(100% - 32px, 900px);
+    margin: 0 auto;
+    flex: 1;
+}
+
+.subheader {
+    padding: 24px 20px 16px;
     text-align: center;
-    padding: 10px 0;
 }
 
 .desc {
-    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
     color: gainsboro;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.projects {
+    padding: 16px 0 38px;
+}
+
+.projects h2 {
+    margin: 0 0 14px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.project-card {
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 38px 18px 18px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    background: rgb(40, 40, 40);
+    color: gainsboro;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #888;
+    background: #333;
+}
+
+.project-name {
+    max-width: calc(100% - 22px);
+    font-size: 19px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.project-desc {
+    color: #c2c2c2;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.project-arrow {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px 16px;
+    background: rgb(40, 40, 40);
+    color: gainsboro;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: gainsboro;
+}
+
+@media (max-width: 700px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
