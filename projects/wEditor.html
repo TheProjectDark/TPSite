@@ -3,66 +3,67 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="wEditor is a lightweight, cross-platform text and code editor focused on simplicity and speed.">
+        <meta name="description" content="wEditor is a lightweight, cross-platform text and code editor focused on simplicity and speed." data-i18n-content="meta.editor">
         <link rel="stylesheet" href="project-style.css">
-        <title>TPSite - wEditor</title>
+        <title data-i18n="title.editor">TPSite - wEditor</title>
     </head>
 
     <body>
 
-        <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false" data-i18n-aria="common.toggleNavigation">☰</button>
 
-        <nav id="sidebar" class="sidebar" aria-label="Main navigation">
-            <a href="../index.html">Home</a>
+        <nav id="sidebar" class="sidebar" aria-label="Main navigation" data-i18n-aria="common.mainNavigation">
+            <a href="../index.html" data-i18n="common.home">Home</a>
             <a href="wEditor.html" aria-current="page">wEditor</a>
             <a href="DemowinterUnityKernel.html">Demowinter/UnityKernel</a>
             <a href="wStresser.html">wStresser</a>
         </nav>
 
         <header class="header">
+            <div class="language-switcher" role="group" aria-label="Choose language" data-i18n-aria="common.chooseLanguage">
+                <button type="button" lang="en" data-language="en" aria-pressed="true">EN</button>
+                <button type="button" lang="ru" data-language="ru" aria-pressed="false">RU</button>
+                <button type="button" lang="de" data-language="de" aria-pressed="false">DE</button>
+            </div>
             <h1>wEditor</h1>
         </header>
 
         <main class="project-content">
         <section class="subheader">
-            <h2 class="subhdesc">Description</h2>
+            <h2 class="subhdesc" data-i18n="common.description">Description</h2>
             <div class="descrow">
                 <img src="../img/wEditor/wEditor.png" alt="wEditor Logo" class="wEditorLogo">
                 <p class="desc">
-                    wEditor - a free, open-source and cross-platform text and code editor made with C++ and the <a href="https://www.wxwidgets.org/" target="_blank" rel="noopener noreferrer">wxWidgets</a> library.
-                    It is a native application that starts instantly, uses minimal memory and needs no installation - just download the binary and run it.
-                    Goals of the project: simplicity, speed and being lightweight.
-                    Currently wEditor is in beta - it is functional, but may contain bugs and unfinished features.
-                    The editor is designed and developed only by <a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">TheProjectDark</a>.
+                    <span data-i18n="editor.descriptionBefore">wEditor - a free, open-source and cross-platform text and code editor made with C++ and the </span><a href="https://www.wxwidgets.org/" target="_blank" rel="noopener noreferrer">wxWidgets</a><span data-i18n="editor.descriptionMiddle"> library. It is a native application that starts instantly, uses minimal memory and needs no installation - just download the binary and run it. Goals of the project: simplicity, speed and being lightweight. Currently wEditor is in beta - it is functional, but may contain bugs and unfinished features. The editor is designed and developed only by </span><a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">TheProjectDark</a>.
                 </p>
             </div>
         </section>
 
         <section class="features">
-            <h2 class="featurestitle">
+            <h2 class="featurestitle" data-i18n="editor.featuresTitle">
                 Features
             </h2>
             <ul class="featureslist">
-                <li>Syntax highlighting</li>
-                <li>Lightweight and fast - tiny footprint, no runtime needed</li>
-                <li>Cross-platform - Linux, Windows and macOS</li>
-                <li>Portable - no installation required</li>
-                <li>File management - New, Open, Save and Save As</li>
-                <li>Undo / Redo</li>
-                <li>Autosave on exit (can be disabled in Preferences)</li>
-                <li>Preferences panel</li>
-                <li>Line margin</li>
+                <li data-i18n="editor.feature1">Syntax highlighting</li>
+                <li data-i18n="editor.feature2">Lightweight and fast - tiny footprint, no runtime needed</li>
+                <li data-i18n="editor.feature3">Cross-platform - Linux, Windows and macOS</li>
+                <li data-i18n="editor.feature4">Portable - no installation required</li>
+                <li data-i18n="editor.feature5">File management - New, Open, Save and Save As</li>
+                <li data-i18n="editor.feature6">Undo / Redo</li>
+                <li data-i18n="editor.feature7">Autosave on exit (can be disabled in Preferences)</li>
+                <li data-i18n="editor.feature8">Preferences panel</li>
+                <li data-i18n="editor.feature9">Line margin</li>
             </ul>
         </section>
 
         <section class="platforms">
-            <h2 class="platformstitle">
+            <h2 class="platformstitle" data-i18n="editor.platformsTitle">
                 Supported platforms
             </h2>
             <table class="platformstable">
                 <tr>
-                    <th>Platform</th>
-                    <th>Architecture</th>
+                    <th data-i18n="editor.platform">Platform</th>
+                    <th data-i18n="editor.architecture">Architecture</th>
                 </tr>
                 <tr>
                     <td>Linux (Debian 11+ / Ubuntu 22.04+)</td>
@@ -73,53 +74,49 @@
                     <td>x86-64, ARM64 (Windows 11)</td>
                 </tr>
                 <tr>
-                    <td>macOS 12+ (Monterey and newer)</td>
+                    <td data-i18n="editor.macosPlatform">macOS 12+ (Monterey and newer)</td>
                     <td>Intel (x86-64), Apple Silicon (ARM64)</td>
                 </tr>
             </table>
         </section>
 
         <section class="screenshots">
-            <h2 class="scrtitle">
+            <h2 class="scrtitle" data-i18n="common.screenshots">
                 Screenshots
             </h2>
-            <img src="../img/wEditor/macOS.png" alt="wEditor on macOS" class="screenshot">
-            <img src="../img/wEditor/Linux.png" alt="wEditor on Linux" class="screenshot">
-            <img src="../img/wEditor/Windows11.png" alt="wEditor on Windows 11" class="screenshot">
-            <img src="../img/wEditor/Windows7.png" alt="wEditor on Windows 7" class="screenshot">
+            <img src="../img/wEditor/macOS.png" alt="wEditor on macOS" data-i18n-alt="editor.altMac" class="screenshot">
+            <img src="../img/wEditor/Linux.png" alt="wEditor on Linux" data-i18n-alt="editor.altLinux" class="screenshot">
+            <img src="../img/wEditor/Windows11.png" alt="wEditor on Windows 11" data-i18n-alt="editor.altWindows11" class="screenshot">
+            <img src="../img/wEditor/Windows7.png" alt="wEditor on Windows 7" data-i18n-alt="editor.altWindows7" class="screenshot">
         </section>
 
         <section class="downloads">
-            <h2 class="downloadstitle">
+            <h2 class="downloadstitle" data-i18n="editor.downloadsTitle">
                 Downloads
             </h2>
-            <p class="downloadslist">There you can find runnable binaries - just download and launch!</p>
+            <p class="downloadslist" data-i18n="editor.downloadsDescription">There you can find runnable binaries - just download and launch!</p>
             <a href="https://github.com/TheProjectDark/wEditor/releases"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="downloadbtn">
-                <span>DOWNLOAD</span>
+                <span data-i18n="editor.downloadButton">DOWNLOAD</span>
             </a>
         </section>
 
         <section class="repo">
-            <h2 class="repotitle">
+            <h2 class="repotitle" data-i18n="common.repository">
                 Repository
             </h2>
             <p class="repodesc">
-                You can find the source code and pre-built applications on <a href="https://github.com/TheProjectDark/wEditor" target="_blank" rel="noopener noreferrer">GitHub</a>
-                (see the <a href="https://github.com/TheProjectDark/wEditor/releases" target="_blank" rel="noopener noreferrer">Releases</a> page).
-                wEditor is licensed under the GNU General Public License v3.0.
-                Contributions, bug reports and suggestions are welcome!
+                <span data-i18n="editor.repositoryBefore">You can find the source code and pre-built applications on </span><a href="https://github.com/TheProjectDark/wEditor" target="_blank" rel="noopener noreferrer">GitHub</a><span data-i18n="editor.repositoryMiddle"> (see the </span><a href="https://github.com/TheProjectDark/wEditor/releases" target="_blank" rel="noopener noreferrer" data-i18n="common.releases">Releases</a><span data-i18n="editor.repositoryAfter"> page). wEditor is licensed under the GNU General Public License v3.0. Contributions, bug reports and suggestions are welcome!</span>
             </p>
         </section>
         </main>
 
-        <script src="../main.js"></script>
-
         <footer>
-            <p>© 2026 TPSite by TheProjectDark</p>
+            <p data-i18n="common.copyright">© 2026 TPSite by TheProjectDark</p>
             <a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">GitHub</a>
         </footer>
+        <script src="../main.js"></script>
     </body>
 </html>

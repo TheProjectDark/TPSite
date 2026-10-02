@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Open-source projects by TheProjectDark, including wEditor, Demowinter/UnityKernel and wStresser." data-i18n-content="meta.home">
     <link rel="stylesheet" href="style.css">
-    <title>TPSite</title>
+    <title data-i18n="title.home">TPSite</title>
 </head>
 
 <body>
-    <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
-    <nav id="sidebar" class="sidebar" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
+    <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false" data-i18n-aria="common.toggleNavigation">☰</button>
+    <nav id="sidebar" class="sidebar" aria-label="Main navigation" data-i18n-aria="common.mainNavigation">
+        <a href="index.html" aria-current="page" data-i18n="common.home">Home</a>
         <a href="projects/wEditor.html">wEditor</a>
         <a href="projects/DemowinterUnityKernel.html">Demowinter/UnityKernel</a>
         <a href="projects/wStresser.html">wStresser</a>
     </nav>
 
     <header class="content">
+        <div class="language-switcher" role="group" aria-label="Choose language" data-i18n-aria="common.chooseLanguage">
+            <button type="button" lang="en" data-language="en" aria-pressed="true">EN</button>
+            <button type="button" lang="ru" data-language="ru" aria-pressed="false">RU</button>
+            <button type="button" lang="de" data-language="de" aria-pressed="false">DE</button>
+        </div>
         <h1>TPSite</h1>
     </header>
 
     <main>
         <section class="subheader">
-            <p class="desc">
+            <p class="desc" data-i18n="home.intro">
                 Welcome to the TP Site! Here you can find information about our open-source projects,
                 including details, screenshots and downloads.
             </p>
         </section>
 
         <section class="projects" aria-labelledby="projects-title">
-            <h2 id="projects-title">Projects</h2>
+            <h2 id="projects-title" data-i18n="home.projects">Projects</h2>
             <div class="project-list">
                 <a class="project-card" href="projects/wEditor.html">
                     <span class="project-name">wEditor</span>
-                    <span class="project-desc">A lightweight, cross-platform text and code editor focused on simplicity and speed.</span>
+                    <span class="project-desc" data-i18n="home.editor">A lightweight, cross-platform text and code editor focused on simplicity and speed.</span>
                     <span class="project-arrow" aria-hidden="true">→</span>
                 </a>
                 <a class="project-card" href="projects/DemowinterUnityKernel.html">
                     <span class="project-name">Demowinter/<wbr>UnityKernel</span>
-                    <span class="project-desc">An open-source C++ kernel project for x86, x86-64 and AArch64.</span>
+                    <span class="project-desc" data-i18n="home.kernel">An open-source C++ kernel project for x86, x86-64 and AArch64.</span>
                     <span class="project-arrow" aria-hidden="true">→</span>
                 </a>
                 <a class="project-card" href="projects/wStresser.html">
                     <span class="project-name">wStresser</span>
-                    <span class="project-desc">A free, cross-platform tool for stress testing systems.</span>
+                    <span class="project-desc" data-i18n="home.stresser">A free, cross-platform tool for stress testing systems.</span>
                     <span class="project-arrow" aria-hidden="true">→</span>
                 </a>
             </div>
@@ -51,7 +57,7 @@
     </main>
 
     <footer>
-        <p>© 2026 TPSite by TheProjectDark</p>
+        <p data-i18n="common.copyright">© 2026 TPSite by TheProjectDark</p>
         <a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">GitHub</a>
     </footer>
     <script src="main.js"></script>

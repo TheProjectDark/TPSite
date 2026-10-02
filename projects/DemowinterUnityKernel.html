@@ -3,60 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Demowinter/UnityKernel is an open-source C++ kernel project for x86, x86-64 and AArch64.">
+        <meta name="description" content="Demowinter/UnityKernel is an open-source C++ kernel project for x86, x86-64 and AArch64." data-i18n-content="meta.kernel">
         <link rel="stylesheet" href="project-style.css">
-        <title>TPSite - Demowinter/UnityKernel</title>
+        <title data-i18n="title.kernel">TPSite - Demowinter/UnityKernel</title>
     </head>
 
     <body>
 
-        <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false" data-i18n-aria="common.toggleNavigation">☰</button>
 
-        <nav id="sidebar" class="sidebar" aria-label="Main navigation">
-            <a href="../index.html">Home</a>
+        <nav id="sidebar" class="sidebar" aria-label="Main navigation" data-i18n-aria="common.mainNavigation">
+            <a href="../index.html" data-i18n="common.home">Home</a>
             <a href="wEditor.html">wEditor</a>
             <a href="DemowinterUnityKernel.html" aria-current="page">Demowinter/UnityKernel</a>
             <a href="wStresser.html">wStresser</a>
         </nav>
 
         <header class="header">
+            <div class="language-switcher" role="group" aria-label="Choose language" data-i18n-aria="common.chooseLanguage">
+                <button type="button" lang="en" data-language="en" aria-pressed="true">EN</button>
+                <button type="button" lang="ru" data-language="ru" aria-pressed="false">RU</button>
+                <button type="button" lang="de" data-language="de" aria-pressed="false">DE</button>
+            </div>
             <h1>Demowinter/UnityKernel</h1>
         </header>
 
         <main class="project-content">
         <section class="subheader">
-            <h2 class="subhdesc">Description</h2>
+            <h2 class="subhdesc" data-i18n="common.description">Description</h2>
             <p class="desc">
-                Demowinter/UnityKernel - a free and open-source kernel made with C++. Our goal is to make a hybrid unix-compatible kernel for x86, x86-64 and AArch64 architectures.
-                Currently the project is indev and contains only some basics like x86 BIOS support, shell, some basic I/O, basic command and FAT32 fs (currently works only in RamDisk).
-                The kernel is being created and developed by 2 developers: <a href="https://github.com/Demowinter" target="_blank" rel="noopener noreferrer">Demowinter</a> and <a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">TheProjectDark</a>.
+                <span data-i18n="kernel.descriptionBefore">Demowinter/UnityKernel - a free and open-source kernel made with C++. Our goal is to make a hybrid unix-compatible kernel for x86, x86-64 and AArch64 architectures. Currently the project is indev and contains only some basics like x86 BIOS support, shell, some basic I/O, basic command and FAT32 fs (currently works only in RamDisk). The kernel is being created and developed by 2 developers: </span><a href="https://github.com/Demowinter" target="_blank" rel="noopener noreferrer">Demowinter</a><span data-i18n="common.and"> and </span><a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">TheProjectDark</a>.
             </p>
         </section>
 
         <section class="screenshots">
-            <h2 class="scrtitle">
+            <h2 class="scrtitle" data-i18n="common.screenshots">
                 Screenshots
             </h2>
-            <img src="../img/UnityKernel/uk.png" alt="UnityKernel startup screen" class="screenshot">
-            <img src="../img/UnityKernel/uk1.png" alt="UnityKernel shell" class="screenshot">
+            <img src="../img/UnityKernel/uk.png" alt="UnityKernel startup screen" data-i18n-alt="kernel.altStartup" class="screenshot">
+            <img src="../img/UnityKernel/uk1.png" alt="UnityKernel shell" data-i18n-alt="kernel.altShell" class="screenshot">
         </section>
 
         <section class="repo">
-            <h2 class="repotitle">
+            <h2 class="repotitle" data-i18n="common.repository">
                 Repository
             </h2>
             <p class="repodesc">
-                You can find the repository of the project on <a href="https://github.com/Demowinter/UnityKernel" target="_blank" rel="noopener noreferrer">GitHub</a>.
-                The kernel is open-source and free to use, modify and distribute.
+                <span data-i18n="kernel.repositoryBefore">You can find the repository of the project on </span><a href="https://github.com/Demowinter/UnityKernel" target="_blank" rel="noopener noreferrer">GitHub</a><span data-i18n="kernel.repositoryAfter">. The kernel is open-source and free to use, modify and distribute.</span>
             </p>
         </section>
         </main>
 
-        <script src="../main.js"></script>
-
         <footer>
-            <p>© 2026 TPSite by TheProjectDark</p>
+            <p data-i18n="common.copyright">© 2026 TPSite by TheProjectDark</p>
             <a href="https://github.com/TheProjectDark" target="_blank" rel="noopener noreferrer">GitHub</a>
         </footer>
+        <script src="../main.js"></script>
     </body>
 </html>

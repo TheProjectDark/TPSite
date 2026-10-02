@@ -13,6 +13,8 @@ body {
 }
 
 .content {
+    position: relative;
+    padding-top: 34px;
     background-color: rgb(40, 40, 40);
 }
 
@@ -40,9 +42,41 @@ h1 {
 
 .menu-btn:focus-visible,
 .sidebar a:focus-visible,
-a:focus-visible {
+a:focus-visible,
+.language-switcher button:focus-visible {
     outline: 2px solid gainsboro;
     outline-offset: 3px;
+}
+
+.language-switcher {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 14px;
+    display: inline-flex;
+    gap: 3px;
+    padding: 3px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #222;
+}
+
+.language-switcher button {
+    min-width: 34px;
+    padding: 5px 7px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #bbb;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.language-switcher button:hover,
+.language-switcher button[aria-pressed="true"] {
+    background: #444;
+    color: gainsboro;
 }
 
 .sidebar {
